@@ -66,11 +66,11 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
       export GIT_PS1_SHOWSTASHSTATE=1
       export GIT_PS1_SHOWUNTRACKEDFILES=0
 
-      #export PS1="$GY[$Y\u$GY@$P\h$GY:$B\W\$(__git_ps1 \"$GY|$LB%s\")$GY]$W\$(get_prompt_symbol) "
-      export PS1="$txtcyn[$txtpur$P\h$txtgrn\w\$(__git_ps1 \"$txtpur($txtred%s$txtpur)\")$txtcyn]$bldred\$(get_prompt_symbol)$txtwht "
+      export PS1="$txtcyn[$GY@$P\h$GY:$B\W\$(__git_ps1 \"$GY|$txtred%s\")$GY]$W\$(get_prompt_symbol)$txtwht "
+      #export PS1="$txtcyn[$txtpur$P\h$txtgrn\w\$(__git_ps1 \"$txtpur($txtred%s$txtpur)\")$txtcyn]$bldred\$(get_prompt_symbol)$txtwht "
     else
-      #export PS1="$GY[$Y\u$GY@$P\h$GY:$B\w$GY]$W\$(get_prompt_symbol) "
-      export PS1="$txtcyn[$txtpur\u$txtgrn\w$txtcyn]$bldred\$(get_prompt_symbol)$txtwht "
+      export PS1="$GY[$Y\u$GY@$P\h$GY:$B\w$GY]$W\$(get_prompt_symbol) "
+      #export PS1="$txtcyn[$txtpur\u$txtgrn\w$txtcyn]$bldred\$(get_prompt_symbol)$txtwht "
     fi
   else
     export TERM='xterm-color'
@@ -80,7 +80,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 #  All my aliases !!
 #--------------------------------------------------------------------
 
-
+alias open="atom open ."                  # opening current folder in atom
 alias p='pwd'                             #Present working directory
 alias gst='git status'                    #Git status 
 alias log='git log --oneline'             #Viewing git log onelines
@@ -89,6 +89,14 @@ alias commit='git commit'                 #For git commits
 alias add='git add .'                     #For git add purpose
 alias push='git push'                     #Pushing to the remote git repo
 alias pull='git pull'                     #Pulling from the remote git repo
+alias .="cd ./"                           #current directory
+alias .1="cd ../"                         #1 directory back
+alias .2="cd ../../"                      #2 directory back
+alias .3="cd ../../../"                   #3 directory back
+
+export ANT_HOME=~/projects/apache-ant-1.9.6
+export PATH=$PATH:$ANT_HOME/bin
 
 export NVM_DIR="/Users/prasunkp/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+        
